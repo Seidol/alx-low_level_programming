@@ -1,59 +1,47 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * infinite_add - add 2 str.
- * @n1: str1.
- * @n2: str2.
- * @r: buffer
- * @size_r: buffer size
- * Return: String with all letters in ROT13 base.
+ * infinite_add - Add two strings representing numbers.
+ * @n1: The first string.
+ * @n2: The second string.
+ * @r: The buffer to store the result.
+ * @size_r: The size of the buffer.
+ * Return: Pointer to the result string, or 0 if buffer size is too small.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int a_len = 0, b_len = 0, carry = 0, a, b, sum, biggest;
-	
+	int a_len = 0, b_len = 0, carry = 0, a, b, sum;
+
+	/* Calculate lengths of n1 and n2 */
 	while (n1[a_len] != '\0')
 		a_len++;
 	while (n2[b_len] != '\0')
 		b_len++;
-	if (a_len > b_len)
-		biggest = a_len;
-	else
-		biggest = b_len;
-	if ((biggest + 1) >= size_r)
+
+	/* Check if the buffer is large enough to hold the result */
+	if (size_r <= a_len || size_r <= b_len)
 		return (0);
-	r[biggest + 1] = '\0';
-	
-	while (biggest >= 0)
+
+	/* Initialize the result buffer */
+	r[size_r - 1] = '\0';
+
+	/* Perform addition from right to left */
+	while (a_len > 0 || b_len > 0 || carry > 0)
 	{
-		a = (n1[a_len - 1] - '0');
-		b = (n1[b_len - 1] - '0');
-		if (a_len > 0 && b_len > 0)
-			sum = a + b + carry;
-		else if (a_len < 0 && b_len > 0)
-			sum = b + carry;
-		else if (a_len > 0 && b_len < 0)
-			sum = a + carry;
-		else
-			sum = carry;
-		
-		if (sum > 9)
-		{
-			carry = sum / 10;
-			sum = (sum % 10) + '0';
-		}
-		else
-		{
-			carry = 0;
-			sum = sum + '0';
-		}
-		r[biggest] = sum;
-		a_len--;
-		b_len--;
-		biggest--;
+		a = (a_len > 0) ? (n1[--a_len] - '0') : 0;
+		b = (b_len > 0) ? (n2[--b_len] - '0') : 0;
+
+		sum = a + b + carry;
+		carry = sum / 10;
+		sum = sum % 10;
+
+		r[--size_r] = sum + '0';
 	}
-	if (*(r) != 0)
-		return (r);
-	else
-		return (r + 1);
+
+	/* Skip leading zeros in the result */
+	while (*r == '0' && *(r + 1) != '\0')
+		r++;
+
+	return (r);
 }
