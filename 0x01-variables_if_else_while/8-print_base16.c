@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 /**
-  * main - Prints a hexadecimal string
+  * main - Displays a hex str
   *
   * Return: Always (Success)
   */
 int main(void)
 {
-	char c;
+	char a;
 
-	for (c = '0'; c <= '9'; c++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		putchar(c);
+		putchar(a);
 	}
 
-	for (c = 'a'; c <= 'f'; c++)
+	for (a = 'a'; a <= 'f'; a++)
 	{
-		putchar(c);
+		putchar(a);
 	}
 
 	putchar('\n');

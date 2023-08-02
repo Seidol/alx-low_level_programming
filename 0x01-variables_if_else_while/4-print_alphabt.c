@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 /**
-  * main - Prints some letters of alphabet
+  * main - Displays some letters ov alphabet
   *
-  * Return: Always (Success)
+  * Return: Always 0 (Success)
   */
 int main(void)
 {
-	char c;
+	char a;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (a = 'a'; a <= 'z'; a++)
 	{
-		if (c != 'e' && c != 'q')
+		if (a != 'e' && a != 'q')
 		{
-			putchar(c);
+			putchar(a);
 		}
 	}
 

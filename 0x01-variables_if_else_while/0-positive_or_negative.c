@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
- * main - Entry point
+ * main - point of entry -this is betty things 
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 Success
  */
 int main(void)
 {

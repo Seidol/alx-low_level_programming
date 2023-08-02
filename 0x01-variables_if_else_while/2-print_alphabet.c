@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabetic
+ * main - Display alphabetic
  *
- * Return: Always (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char c;
+	char a;
 
-	for (c = 'a'; c <= 'z'; c++)
-		putchar(c);
+	for (a = 'a'; a <= 'z'; a++)
+		putchar(a);
 
 	putchar('\n');
 	return (0);

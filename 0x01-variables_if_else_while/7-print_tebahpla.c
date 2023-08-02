@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 /**
-  * main - this program will prints number in reverse
+  * main - This C program 'll displays num in reverse
   *
-  * Return: Always (Success)
+  * Return: Always
   */
 int main(void)
 {
-	char c;
+	char a;
 
-	for (c = 'z'; c >= 'a'; c--)
+	for (a = 'z'; a >= 'a'; a--)
 	{
-		putchar(c);
+		putchar(a);
 	}
 
 	putchar('\n');

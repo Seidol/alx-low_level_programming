@@ -1,24 +1,24 @@
 #include <stdio.h>
 
 /**
-  * main -This program will Prints combination of numbers
+  * main -This C betty program will displays combo of nums
   *
   * Return: Always (Success)
   */
 int main(void)
 {
-	int c, i;
+	int a, b;
 
-	for (c = '0'; c <= '9'; c++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		for (i = '0'; i <= '9'; i++)
+		for (b = '0'; b <= '9'; b++)
 		{
-			if (c < i)
+			if (a < b)
 			{
-				putchar(c);
-				putchar(i);
+				putchar(a);
+				putchar(b);
 
-				if (c != '8' || (c == '8' && i != '9'))
+				if (a != '8' || (a == '8' && b != '9'))
 				{
 					putchar(',');
 					putchar(' ');

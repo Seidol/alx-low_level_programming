@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 /**
-  * main - This program will Prints a serie of numbers with commas
+  * main - This C program will Displays a series of nums with commas
   *
-  * Return: Always (Success);
+  * Return: Always (Success)
   */
 int main(void)
 {
-	int c;
+	int a;
 
-	for (c = '0'; c <= '9'; c++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		putchar(c);
+		putchar(a);
 
-		if (c != '9')
+		if (a != '9')
 		{
 			putchar(',');
 			putchar(' ');

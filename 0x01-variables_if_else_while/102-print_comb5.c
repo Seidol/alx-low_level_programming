@@ -1,31 +1,31 @@
 #include <stdio.h>
 
 /**
-  * main - Prints 3 combination of numbers
+  * main - Displays three combo of nums
   *
   * Return: Always (Success)
   */
 int main(void)
 {
-	int c, i, k, j;
+	int a, c, k, j;
 
-	for (c = 48; c <= 57; c++)
+	for (a = 48; a <= 57; a++)
 	{
-		for (i = 48; i <= 57; i++)
+		for (c = 48; c <= 57; c++)
 		{
 			for (k = 48; k <= 57; k++)
 			{
 				for (j = 48; j <= 57; j++)
 				{
-					if (((k + j) > (c + i) &&  k >= c) || c < k)
+					if (((k + j) > (a + c) &&  k >= a) || a < k)
 					{
+						putchar(a);
 						putchar(c);
-						putchar(i);
 						putchar(' ');
 						putchar(k);
 						putchar(j);
 
-					if (c + i + k + j == 227 && c == 57)
+					if (a + c + k + j == 227 && a == 57)
 					{
 					break;
 					}
