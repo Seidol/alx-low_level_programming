@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-  * add - Adds two numbers
-  * @n1: The first number to be executed
-  * @n2: The second number to be executed
+  * add - Adds 2 n
+  * @n1: The 1st n 2be exe...
+  * @n2: The 2nd n 2be exe...
   *
-  * Return: Integer value
+  * Return: Integer val
   */
 int add(int n1, int n2)
 {

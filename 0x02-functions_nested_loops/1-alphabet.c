@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
-  * print_alphabet - Make the alphabet
+  * print_alphabet - This will Make the alph...
   *
-  * Return: void
+  * Return: void value.
   */
 void print_alphabet(void)
 {
-	char c;
+	char ch;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		_putchar(c);
+		_putchar(ch);
 	}
 
 	_putchar('\n');

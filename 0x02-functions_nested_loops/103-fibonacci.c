@@ -1,24 +1,24 @@
 #include <stdio.h>
 
 /**
-  * main - Prints the sum of Even Fibonacci numbers
+  * main - Displays sum of even Fibo nums
   * less than 4000000.
   *
-  * Return: Nothing!
+  * Return: empty!
   */
 int main(void)
 {
 	int i = 0;
-	long j = 1, k = 2, sum = k;
+	long j = 1, a = 2, sum = a;
 
-	while (k + j < 4000000)
+	while (a + j < 4000000)
 	{
-		k += j;
+		a += j;
 
-		if (k % 2 == 0)
-			sum += k;
+		if (a % 2 == 0)
+			sum += a;
 
-		j = k - j;
+		j = a - j;
 
 		++i;
 	}
