@@ -5,7 +5,7 @@
  * @a: The number whose square root is to be found.
  * @b: The number that iterates from 1 to n to find the square root.
  *
- * Return: The square root of n if found, otherwise -1 is returned, and errno is set appropriately.
+ * Return: The sqr rt of n if found, otherwise -1 is rtrd, and errno is set appropriately.
  */
 int sqrt_helper(int a, int b)
 {
