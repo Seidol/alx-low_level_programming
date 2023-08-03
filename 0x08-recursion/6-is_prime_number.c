@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * int is_prime_helper - Helper function to check if a number is prime.
+ * is_prime_helper - Helper function to check if a number is prime.
  * @a: The number to be checked.
  * @b: The divisor that iterates from 2 to n-1.
  *
