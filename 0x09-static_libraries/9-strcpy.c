@@ -20,5 +20,5 @@ char *_strcpy(char *dest, const char *src)
 
 	dest[i] = '\0'; /* Null-terminate the destination string */
 
-	return dest;
+	return (dest);
 }
