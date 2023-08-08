@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- * argstostr - Concatenates command line arguments into a string
- * @ac: Number of command line arguments
- * @av: Array of command line arguments
- * Return: Pointer to the concatenated string, or NULL on failure
+ * argstostr - Concatenate command line arguments into a string.
+ * @ac: Number of command line arguments.
+ * @av: Double pointer array of command line arguments.
+ * Return: Pointer to the concatenated string, or NULL on failure.
  */
 char *argstostr(int ac, char **av)
 {
@@ -33,18 +33,20 @@ char *argstostr(int ac, char **av)
 
 	i = 0;
 	while (i < ac)
+	{
 		n = 0;
 		while (av[i][n])
+		{
 			str[r] = av[i][n];
 			r++;
 			n++;
-		switch (str[r])
+		}
+		if (str[r] == '\0')
 		{
-			case '\0':
-				str[r++] = '\n';
-				break;
+			str[r++] = '\n';
 		}
 		i++;
+	}
 
 	return (str);
 }
