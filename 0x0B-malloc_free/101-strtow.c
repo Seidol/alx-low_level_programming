@@ -24,7 +24,7 @@ int count_word(char *s)
 		s++;
 	}
 
-	return word_count;
+	return (word_count);
 }
 
 /**
