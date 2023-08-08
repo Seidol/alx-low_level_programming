@@ -9,11 +9,8 @@
  */
 int count_word(char *s)
 {
-	int in_word, char_count, word_count;
-
-	in_word = 0;   // Indicates if currently inside a word
-	word_count = 0; // Number of words counted
-	char_count = 0; // Number of characters in a word
+	int in_word = 0;   /* Indicates if currently inside a word */
+	int word_count = 0; /* Number of words counted */
 
 	while (*s)
 	{
