@@ -13,6 +13,7 @@
 void print_dog(struct dog *dd)
 {
 	if (!dd)
+		return;
 	{
 		printf("Name: %s\n", (dd->name) ? dd->name : "Unknown");
 		printf("Age: %f\n", (dd->age > 0) ? dd->age : 0.0);
