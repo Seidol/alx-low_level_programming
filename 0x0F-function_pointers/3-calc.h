@@ -1,12 +1,11 @@
-#ifndef CAL_H
-#define CAL_H
-
+#ifndef _HEADER_
+#define _HEADER_
 /**
- * struct op - A structure.
- * @op: The op.
- * @f: function.
+ * struct op - ..
+ *
+ * @op: ..
+ * @f: ..
  */
-
 typedef struct op
 {
 	char *op;
