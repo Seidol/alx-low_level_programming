@@ -21,7 +21,7 @@ size_t free_listint_safe(listint_t **h)
 		free(*h);
 		*h = temp;
 
-		if ((uintptr_t)*h <= (uintptr_t)temp)
+		if (*h <= temp)
 		{
 			break;
 		}
