@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - Retrieves the node at a specific
- * index in a linked list.
+ * get_nodeint_at_index - Retrieves the node at a specific index
+ * in a linked list.
  * @head: Pointer to the first node in the linked list.
  * @index: Index of the node to retrieve.
  *
@@ -11,15 +11,18 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
+	listint_t *temp;
+	unsigned int a;
+
 	if (!head)
 		return (NULL);
 
-	listint_t *t = head;
+	temp = head;
 
-	for (unsigned int i = 0; i < index && t; i++)
+	for (a = 0; a < index && temp; a++)
 	{
-		t = t->next;
+		temp = temp->next;
 	}
 
-	return (t ? t : NULL);
+	return (temp ? temp : NULL);
 }
