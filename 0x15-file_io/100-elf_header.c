@@ -5,25 +5,32 @@
 #include <unistd.h>
 
 /**
- * _strncmp - compare two strings
- * @s1: the first string
- * @s2: the second string
- * @n: the max number of bytes to compare
+ * compare_strings - Compares two strings up to a specified
+ * maximum number of bytes.
+ * @string1: Pointer to the first string.
+ * @string2: Pointer to the second string.
+ * @max_bytes: The maximum number of bytes to compare.
  *
- * Return: 0 if the first n bytes of s1 and s2 are equal, otherwise non-zero
+ * Return:- 0 if the first max_bytes bytes of string1 and string2 are equal 
+ * - A non-zero value if they are not equal.
  */
-int _strncmp(const char *s1, const char *s2, size_t n)
+int compare_strings(const char *string1, const char *string2, size_t max_bytes)
 {
-	for ( ; n && *s1 && *s2; --n, ++s1, ++s2)
+	if (max_bytes == 0) return 0;
+
+	do {
+		if (*string1 != *string2)
+			return (*string1 - *string2);
+
+		++string1;
+		++string2;
+	} while (--max_bytes && *string1 && *string2);
+
+	if (max_bytes)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-	}
-	if (n)
-	{
-		if (*s1)
+		if (*string1)
 			return (1);
-		if (*s2)
+		if (*string2)
 			return (-1);
 	}
 	return (0);
