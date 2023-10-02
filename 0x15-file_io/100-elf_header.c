@@ -40,13 +40,14 @@ void print_error(char *message);
 
 int main(int argc, char *argv[])
 {
+	int fd;
 	if (argc != 2)
 	{
 		fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
 		return (98);
 	}
 
-	int fd = open(argv[1], O_RDONLY);
+	fd = open(argv[1], O_RDONLY);
 
 	if (fd == -1)
 	{
@@ -75,6 +76,7 @@ void display_elf_info(int fd)
 {
 	Elf64_Ehdr header;
 	ssize_t bytes_read = read(fd, &header, sizeof(Elf64_Ehdr));
+	int i;
 
 	if (bytes_read != sizeof(Elf64_Ehdr) || memcmp(header.e_ident,
 		ELFMAG, SELFMAG) != 0)
@@ -85,7 +87,7 @@ void display_elf_info(int fd)
 
 	printf("ELF Header:\n");
 	printf("	Magic:	");
-	for (int i = 0; i < EI_NIDENT; i++)
+	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x", header.e_ident[i]);
 		if (i < EI_NIDENT - 1)
