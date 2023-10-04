@@ -73,7 +73,8 @@ int main(int argc, char *argv[])
 
 	buffer = allocate_buffer();
 	source_fd = open(argv[1], O_RDONLY);
-	destination_fd = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+
+	destination_fd = open(argv[2], O_WRONLY | O_CREAT | O_EXCL, 0664);
 
 	if (source_fd == -1 || destination_fd == -1)
 	{
@@ -97,6 +98,5 @@ int main(int argc, char *argv[])
 
 	free(buffer);
 	close_files(source_fd, destination_fd);
-
 	return (0);
 }
